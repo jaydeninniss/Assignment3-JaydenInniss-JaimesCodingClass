@@ -1,0 +1,18 @@
+@import '/styles/vendor/pico.colors.min.css';
+@import '/styles/vendor/pico.min.css';
+
+
+@import 'fonts';
+
+/* overwrite the pico variables here */
+:root {
+
+}
+
+.centered {
+
+}
+
+body {
+
+}
