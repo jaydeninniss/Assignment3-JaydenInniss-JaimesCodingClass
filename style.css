@@ -6,13 +6,24 @@
 
 /* overwrite the pico variables here */
 :root {
+    display: flex;
 
 }
 
 .centered {
 
+
 }
 
 body {
+
+    .container {
+        width: 50vw;
+        padding: 100px;
+    }
+
+    fieldset {
+        margin-bottom: 20px;
+    }
 
 }

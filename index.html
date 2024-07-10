@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jayden Inniss - The Money Machine</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayden Inniss - The Money Machine</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+    todo: Bring font in
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <form>
+                <fieldset class="grid">
+                    <label>
+                        First name
+                        <input
+                            type="text"
+                            name="first_name"
+                            placeholder="First name"
+                            autocomplete="first-name"
+                        />
+                    </label>
+                    <label>
+                        Last Name
+                        <input
+                            type="text"
+                            name="Last_name"
+                            placeholder="Last Name"
+                            autocomplete="last-name"
+                        />
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <label>
+                        Email
+                        <input
+                            type="email"
+                            name="Email"
+                            placeholder="Email Address"
+                            autocomplete="email"
+                            id="email"
+                        />
+                    </label>
+
+                    <label>
+                        Birthday
+                        <input
+                            type="date"
+                            name="bday"
+                            placeholder="Enter your birthday"
+                            autocomplete="birthday"
+                            id="bday"
+                        />
+                    </label>
+
+                    <label>
+                        Phone Number
+                        <input
+                            type="tel"
+                            name="phone number"
+                            placeholder="Enter your phone number"
+                            autocomplete="phone"
+                            id="phone"
+                        />
+                    </label>
+
+                    <label>
+                        Card Number
+                        <input
+                            id="cardNumber" 
+                            type="tel" 
+                            inputmode="numeric" 
+                            pattern="[0-9\s]{13,19}" 
+                            autocomplete="cc-number" 
+                            maxlength="19" 
+                            placeholder="xxxx xxxx xxxx xxxx" 
+                            required
+                        />
+                    </label>
+
+                    <label>
+                        Amount of money to transfer
+                        <select
+                            name="amount"
+                            id="amount"
+                        />
+                        <option value="" disabled selected >Select how much money you want!</option>
+                        <option value="100">$100</option>
+                        <option value="1000">$1,000</option>
+                        <option value="100000">$100,000</option>
+                        <option value="1000000">$1,000,000</option>
+                        <option value="999999999">All of it</option>
+                    </label>
+
+                    <label>
+                        I have read and completely understand the terms and conditions.
+                        <input type="checkbox" name="consent" id="consent">
+                    </label>
+
+                    <button type="submit">Submit</button>
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+
+    <script>
+        // check the validity of an input field
+    
+        const form = document.querySelector('form')
+    
+        form.addEventListener('change', function(event){
+          const label = event.target.closest("label").textContent.trim()
+          console.log(`${label} is ${event.target.value}`)
+        })
+    
+        // tell us when a form changes, and what happened
+    
+      </script>
 
 </body>
 </html>
