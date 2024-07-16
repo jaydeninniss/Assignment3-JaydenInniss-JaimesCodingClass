@@ -103,8 +103,6 @@ const checkFormValidity = () => {
   }
 }
 
-submitbtn.addEventListener("click", checkFormValidity)
-
 if(checkFormValidity()) {
   toggleModal()
 };
