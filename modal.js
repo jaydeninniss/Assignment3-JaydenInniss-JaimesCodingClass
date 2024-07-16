@@ -4,15 +4,25 @@ const openingClass = "modal-is-opening";
 const closingClass = "modal-is-closing";
 const scrollbarWidthCssVar = "--pico-scrollbar-width";
 const animationDuration = 400; // ms
+submitbtn = document.querySelector("#openModal");
 let visibleModal = null;
 
 // Toggle modal
 const toggleModal = (event) => {
   // TODO: Run the checkFormValidity function, and if it returns true, then run the code below
+
   event.preventDefault();
-  const modal = document.getElementById(event.currentTarget.dataset.target);
-  if (!modal) return;
-  modal && (modal.open ? closeModal(modal) : openModal(modal));
+
+  if(checkFormValidity()) {
+    
+    console.log("Form Submitted");
+    const modal = document.getElementById(event.currentTarget.dataset.target);
+
+    if (!modal) return;
+    modal && (modal.open ? closeModal(modal) : openModal(modal));
+  }
+
+
 };
 
 // Open modal
@@ -74,15 +84,25 @@ const checkFormValidity = () => {
   const total = formElements.length
   let totalValid = 0
 
+
+
   let values = formElements.forEach((el) => {
     if (el.checkValidity()) {
       totalValid += 1
+      console.log(totalValid)
+      console.log(total)
     }
   })
 
   if (totalValid == total) {
+
+    toggleModal()
     return true
+
   } else {
+    console.log("hello")
     return false
   }
 }
+
+submitbtn.addEventListener("click", checkFormValidity)

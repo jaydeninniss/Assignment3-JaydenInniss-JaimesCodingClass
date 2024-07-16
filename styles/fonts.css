@@ -1,1 +1,7 @@
-// load the Recife font here
+@font-face {
+    font-family: 'Recife';
+    src: url('/fonts/RecifeText-Regular.eot');
+    src: url('/fonts/RecifeText-Regular.ttf') format('truetype');
+    src: url('/fonts/RecifeText-Regular.woff') format('woff');
+    font-weight: 400;
+}

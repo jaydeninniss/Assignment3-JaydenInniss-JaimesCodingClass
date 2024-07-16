@@ -8,9 +8,11 @@
 </head>
 <body>
 
-    todo: Bring font in
-    <header>
-        <h1></h1>
+    <header class="centered">
+        <hgroup>
+            <h1>Share money = More friends!</h1>
+            <p>Sharing caring! Share a little cash with me and i'll be your best friend ;)</p>
+        </hgroup>
     </header>
 
     <main>
@@ -24,6 +26,7 @@
                             name="first_name"
                             placeholder="First name"
                             autocomplete="first-name"
+                            required
                         />
                     </label>
                     <label>
@@ -32,7 +35,8 @@
                             type="text"
                             name="Last_name"
                             placeholder="Last Name"
-                            autocomplete="last-name"
+                            autocomplete="family-name"
+                            required
                         />
                     </label>
                 </fieldset>
@@ -46,6 +50,7 @@
                             placeholder="Email Address"
                             autocomplete="email"
                             id="email"
+                            required
                         />
                     </label>
 
@@ -55,8 +60,9 @@
                             type="date"
                             name="bday"
                             placeholder="Enter your birthday"
-                            autocomplete="birthday"
+                            autocomplete="bday"
                             id="bday"
+                            required
                         />
                     </label>
 
@@ -66,8 +72,9 @@
                             type="tel"
                             name="phone number"
                             placeholder="Enter your phone number"
-                            autocomplete="phone"
+                            autocomplete="tel"
                             id="phone"
+                            required
                         />
                     </label>
 
@@ -85,31 +92,60 @@
                         />
                     </label>
 
+
+
                     <label>
                         Amount of money to transfer
                         <select
                             name="amount"
-                            id="amount"
-                        />
-                        <option value="" disabled selected >Select how much money you want!</option>
-                        <option value="100">$100</option>
-                        <option value="1000">$1,000</option>
-                        <option value="100000">$100,000</option>
-                        <option value="1000000">$1,000,000</option>
-                        <option value="999999999">All of it</option>
+                            id="amount">
+                            <option value="" disabled selected >Select how much money you want!</option>
+                            <option value="100">$100</option>
+                            <option value="1000">$1,000</option>
+                            <option value="100000">$100,000</option>
+                            <option value="1000000">$1,000,000</option>
+                            <option value="999999999">All of it</option>
+                        </select>
                     </label>
 
                     <label>
-                        I have read and completely understand the terms and conditions.
-                        <input type="checkbox" name="consent" id="consent">
+                        I have read and completely understand the terms and conditions.<br>
+                        <input type="checkbox" name="consent" id="consent" required>
                     </label>
 
-                    <button type="submit">Submit</button>
+                    <button id="openModal" type="submit">Submit</button>
+
+
+                    <!-- <input type="submit" id="submit" value="submit" onclick="toggleModal(event)" data-target="modal"/> -->
+                    
+
+                    <dialog id="modal">
+                        <article>
+                            <h2>Confirm Your Transaction</h2>
+                            <p>Hey! Life's better with friends! Share a small amount of money to gain a new one!
+                            </p>
+
+                            <footer>
+                                <button className="secondary">Cancel</button>
+                                <button type="submit">Submit</button>
+
+                                <button className="secondary" onclick="closeModal(modal)">Cancel</button>
+                                <button onclick="closeModal(modal)">Confirm</button>
+                            </footer>
+                        </article>
+                    </dialog>
+
 
                 </fieldset>
             </form>
+
+
         </div>
     </main>
+
+    <footer class="centered">
+        <p>Disclaimer Here!</p>
+    </footer>
 
 
     <script>
@@ -118,13 +154,15 @@
         const form = document.querySelector('form')
     
         form.addEventListener('change', function(event){
-          const label = event.target.closest("label").textContent.trim()
-          console.log(`${label} is ${event.target.value}`)
+            const label = event.target.closest("label").textContent.trim()
+            console.log(`${label} is ${event.target.value}`)
         })
     
         // tell us when a form changes, and what happened
     
-      </script>
+    </script>
+
+    <script src="modal.js"></script>
 
 </body>
 </html>
