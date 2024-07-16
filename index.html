@@ -110,15 +110,11 @@
 
                     <label>
                         I have read and completely understand the terms and conditions.<br>
-                        <input type="checkbox" name="consent" id="consent" required>
+                        <input type="checkbox" name="consent" id="consent" required role="switch">
                     </label>
 
-                    <button id="openModal" type="submit">Submit</button>
-
-
-                    <!-- <input type="submit" id="submit" value="submit" onclick="toggleModal(event)" data-target="modal"/> -->
+                    <input type="submit" id="openModal" value="submit" onclick="toggleModal(event)" data-target="modal"/>
                     
-
                     <dialog id="modal">
                         <article>
                             <h2>Confirm Your Transaction</h2>
@@ -126,11 +122,11 @@
                             </p>
 
                             <footer>
-                                <button className="secondary">Cancel</button>
-                                <button type="submit">Submit</button>
+                                <!-- <button className="secondary">Cancel</button>
+                                <button type="submit">Submit</button> -->
 
                                 <button className="secondary" onclick="closeModal(modal)">Cancel</button>
-                                <button onclick="closeModal(modal)">Confirm</button>
+                                <button onclick="confirmModal(modal)">Confirm</button>
                             </footer>
                         </article>
                     </dialog>

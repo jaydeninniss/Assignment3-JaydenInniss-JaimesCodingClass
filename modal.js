@@ -11,11 +11,11 @@ let visibleModal = null;
 const toggleModal = (event) => {
   // TODO: Run the checkFormValidity function, and if it returns true, then run the code below
 
-  event.preventDefault();
+  // 
 
   if(checkFormValidity()) {
-    
-    console.log("Form Submitted");
+
+    event.preventDefault();
     const modal = document.getElementById(event.currentTarget.dataset.target);
 
     if (!modal) return;
@@ -96,13 +96,15 @@ const checkFormValidity = () => {
 
   if (totalValid == total) {
 
-    toggleModal()
     return true
 
   } else {
-    console.log("hello")
     return false
   }
 }
 
 submitbtn.addEventListener("click", checkFormValidity)
+
+if(checkFormValidity()) {
+  toggleModal()
+};
