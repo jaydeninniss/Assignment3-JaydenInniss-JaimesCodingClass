@@ -4,7 +4,6 @@ const openingClass = "modal-is-opening";
 const closingClass = "modal-is-closing";
 const scrollbarWidthCssVar = "--pico-scrollbar-width";
 const animationDuration = 400; // ms
-submitbtn = document.querySelector("#openModal");
 let visibleModal = null;
 
 // Toggle modal

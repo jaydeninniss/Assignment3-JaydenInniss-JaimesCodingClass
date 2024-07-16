@@ -1,14 +1,13 @@
 @import '/styles/vendor/pico.colors.min.css';
 @import '/styles/vendor/pico.min.css';
 
-
 @import '/styles/fonts.css';
 
-/* overwrite the pico variables here */
+
 :root {
     display: flex;
     --pico-border-radius: 0.2rem;
-    /* Your istructions say to set this to 2rem, but it doesnt mathc  */
+    /* Your istructions say to set this to 2rem, but it doesnt match the mockup, so I matched the mockup  */
     --pico-typography-spacing-vertical: 1.5rem;
 
 }
