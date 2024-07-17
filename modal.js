@@ -10,8 +10,6 @@ let visibleModal = null;
 const toggleModal = (event) => {
   // TODO: Run the checkFormValidity function, and if it returns true, then run the code below
 
-  // 
-
   if(checkFormValidity()) {
 
     event.preventDefault();
@@ -20,8 +18,6 @@ const toggleModal = (event) => {
     if (!modal) return;
     modal && (modal.open ? closeModal(modal) : openModal(modal));
   }
-
-
 };
 
 // Open modal

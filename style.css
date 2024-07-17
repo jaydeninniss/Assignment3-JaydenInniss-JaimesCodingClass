@@ -7,7 +7,7 @@
 :root {
     display: flex;
     --pico-border-radius: 0.2rem;
-    /* Your istructions say to set this to 2rem, but it doesnt match the mockup, so I matched the mockup  */
+    /* Your instructions say to set this to 2rem, but it doesn't match the mockup, so I matched the mockup! Thanks!!  */
     --pico-typography-spacing-vertical: 1.5rem;
 
 }
@@ -16,7 +16,6 @@ h1 {
     color: var(--pico-color-jade-700);
     font-family: "Recife";
 }
-
 
 .centered {
     max-width: 600px;
@@ -27,7 +26,6 @@ h1 {
 
 footer {
     padding: 0;
-
 }
 
 body {
@@ -44,5 +42,4 @@ body {
             color: var(--pico-color-jade-700);
         }
     }
-
 }
